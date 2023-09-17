@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Bharath's Portfolio</div>
+            <div class="right">
+            <ul>
+                <li><a href="#about">about me</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#education">educational background</a></li>
+                <li><a href="#contact">contact me</a></li>
+            </ul>   
+        </div>  
+        </nav>
+    </header>
+        <main>
+            <section class="first">
+                <div class="leftsection">Hi! My name is<span class="purple"> Bharath</span> <div> and I am a <div class="animated">Full Stack Web Developer</div></div></div>
+                <div class="rightsection"><img src="programmer.jpeg" alt="bharathpic"></div>
+            </section>
+            <hr id="about">
+                <h1 >About me</h1>
+            <section class="second">
+                
+                <div class="lsection">"Motivated Computer Science Engineer with good knowledge <div>of Data Structures, Databases, HTML, CSS, and JavaScript.</div> <div>Currently working towards becoming a Full Stack Developer</div> <div>by actively learning related technologies.</div> <div>Enthusiastic about continuous learning, I possess</div>  a curious mindset that drives me to explore new things.<div> Apart from my professional interests, I enjoy</div> playing cricket in my leisure time."</div>
+                <div class="rsection"><img src="bnewimg.jpg" alt="bnewimg"></div>
+                
+            </section>
+            <hr id="skills" class="hr2">
+            <h1 >Skills</h1>
+            <section class="third">
+                <div class="lefty">
+                    <ul>
+                        <li class="icons"><img src=cprog.png></li>
+                        <li class="icons"><img src=c++.png></li>
+                        <li class="icons"><img src=ds.png></li>
+                        <li class="icons"><img src=dbms.png></li>
+                        <li class="icons"><img src=html.png></li>
+                        <li class="icons"><img src=css.png></li>
+                        <li class="icons"><img src=js.png></li>
+                    </ul>
+                    
+                    <ul>
+                        <li> C Programming</li>
+                        <li> C++ Programming</li>
+                        <li> Data structures</li>
+                        <li> DBMS</li>
+                        <li> HTML</li>
+                        <li> CSS</li>
+                        <li> JavaScript</li> 
+                    </ul>
+                </div>
+                <div class="righty"><img src="skills.png" alt="skills"> </div>
+            </section>
+            <hr id="education">
+            <h1 >Educational Background</h1>
+            <section class="forth">
+                <div class="lefted">
+                    <ul>
+                        <li>St. Aloysius Anglo Indian High School </li>
+                        <li class="nostyle">ICSE (Indian Certificate of Secondary Education)</li>
+                        <li class="nostyle">Completed in 2018,Visakhapatnam.</li>
+                        <li>Government polytechnic college  </li>
+                        <li class="nostyle">Mechancial Engineering</li>
+                        <li class="nostyle">Completed in 2021,Vijayawada.</li>
+                        <li>Raghu Engineering college  </li>
+                        <li class="nostyle">Computer Science Engineering with specialization in AIML </li>
+                        <li class="nostyle">(Artificial Intelligence and Machine Learning)</li>
+                        <li class="nostyle">Completed in 2024,Visakhapatnam.</li>
+                    </ul>
+                </div>
+                <div class="righted">
+                    <img src="education.png" alt="education">
+                </div>
+            </section>
+        
+            <hr id="contact">
+            <h1 class="contact">Contact me</h1>
+            <section class="fifth"> 
+                <div class="fdiv">
+                    <ul>
+                        <li class="nostyle" ><img src="phone.jpeg" alt="call"></li>
+                        <li class="nostyle"><img src="mail.png" alt="mail"</li>
+                    </ul>
+                    <ul id="details">
+                        <li class="nostyle">7730813199</li>
+                        <li class="nostyle">bharathgudla20@gmail.com</li>
+                    </ul>
+                    
+                </div>
+                <div class="secdiv">
+                    <form onsubmit="sendEmail();reset();return false;">
+                        <input type="text" id="name" placeholder="Your name" required>
+                        <input type="email" id="email" placeholder="Email id" required>
+                        <input type="text" id="phone" placeholder="Phone no" required>
+                        <textarea id="message" rows="5" placeholder="message"></textarea>
+                        <button type="submit">send</button>
+                    </form>
+                </div>
+                
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="sdiv">
+                Developed with love Gudla Bharath &#169; 2023
+            </div>
+        </footer>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host: "bharathgudla20@gmail.com",
+                    Username: "bharathgudla20@gmail.com",
+                    Password: "Bharath@20",
+                    To: 'bharathgudla20@gmail.com',
+                    From: document.getElementById("email").value,
+                    Subject: "New contact form Enquiry",
+                    Body: "Name:"+document.getElementById("name").value
+                    +"<br> Email:"+document.getElementById("email").value
+                    +"<br> phone no:"+document.getElementById("phone").value
+                    +"<br> message:"+document.getElementById("message").value
+                }).then(
+                    message => alert(message)
+                );
+            }
+        </script>
+            <script src="script.js"></script>
+</body>
+</html>
